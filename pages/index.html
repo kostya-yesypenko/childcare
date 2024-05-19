@@ -10,7 +10,10 @@
     <a href="/visualization">Візуалізація даних</a>
     <ul>
         {% for center in centers %}
-            <li>{{ center[1] }} - {{ center[2] }} - {{ center[3] }} грн/місяць - Вмістимість: {{ center[4] }}</li>
+            <li>
+                {{ center[1] }} - {{ center[2] }} - {{ center[3] }} грн/місяць - Вмістимість: {{ center[4] }}
+                <a href="{{ url_for('edit_center_route', id=center[0]) }}">Редагувати</a>
+            </li>
         {% endfor %}
     </ul>
 </body>

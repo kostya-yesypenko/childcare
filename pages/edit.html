@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Додати новий заклад</title>
+    <title>Редагувати заклад</title>
 </head>
 <body>
-    <h1>Додати новий дитячий заклад</h1>
-    <form method="POST" action="{{ url_for('add_center_route') }}">
+    <h1>Редагувати дитячий заклад</h1>
+    <form method="POST" action="{{ url_for('edit_center_route', id=center_id) }}">
         {{ form.hidden_tag() }}
         <p>
             {{ form.name.label }}<br>
@@ -35,7 +35,7 @@
                 <span style="color: red;">[{{ error }}]</span>
             {% endfor %}
         </p>
-        <p><input type="submit" value="Додати"></p>
+        <p><input type="submit" value="Оновити"></p>
     </form>
 </body>
 </html>
