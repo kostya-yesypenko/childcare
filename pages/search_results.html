@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Результати пошуку</title>
+</head>
+<body>
+    <h1>Результати пошуку</h1>
+    <ul>
+        {% for center in centers %}
+            <li>{{ center[1] }} - {{ center[2] }} - {{ center[3] }} грн/місяць - Вмістимість: {{ center[4] }}</li>
+        {% endfor %}
+    </ul>
+    <a href="/search">Назад до пошуку</a>
+</body>
+</html>
